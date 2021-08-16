@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lamsahle El Mamoun et Zaalani Mohammed Amine">
+    <meta name="description" content="Travail pratique #03 — Optimiser et décliner une maquette HTML+CSS">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- changement de police pour gagner en convivialité -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" type="text/css" href="assets/css/01-general.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/02-composantes.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/03-commun.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/04-composition.css" />
+    <title>Philosophie Vedge</title>
+  </head>
+  <body>
+    <!-- Barre de navigation -->
+    <header>
+      <div class="grid container">
+        <a href="index.html" class="logo">Vedge</a>
+        <nav>
+          <ul>
+            <li><a href="#">Nos promotions</a></li>
+            <li class="dropdown">
+              <a href="#">Nos restaurants <small>&nabla;</small></a>
+              <ul class="dropdown-content">
+                <li><a href="#">Drummondville</a></li>
+                <li><a href="val-jalbert.html">Val-Jalbert</a></li>
+                <li><a href="#">Dix30</a></li>
+                <li><a href="#">Trois-Rivières</a></li>
+                <li><a href="#">Toronto</a></li>
+                <li><a href="#">Berlin</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <form class="search">
+          <label for="search">Trouvez un Vedge près de chez vous :</label>
+          <input type="text" name="search" id="search" placeholder="Code postal : H2E 2Y7" />
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <!-- Section image principale -->
+      <section class="hero hero-philo">
+        <div class="hero-wrapper">
+          <h1 class="heading-primary container">
+            Bon au goût, bon pour la nature
+          </h1>
+          <a class="btn btn-small" href="#"> Lisez le manifeste « Vedge »</a>
+        </div>
+        <!-- Image reposionnée avec background-image pour pouvoir centrer facilement le texte en dessus -->
+      </section>
+
+      <div class="container">
+        <section class="actions">
+          <h2 class="visibility-hidden">
+            Commander et réserver votre table en ligne
+          </h2>
+          <div class="grid">
+            <a class="btn">Commander</a>
+            <a class="btn">Réserver</a>
+          </div>
+        </section>
+
+        <section class="philo-articles">
+          <h2>Notre philosophie</h2>
+          <div class="chained-articles">
+            <div>
+              <img src="assets/images/about4.jpg" alt="Image des légumes frais" />
+              <div>
+                <h3>Botanique et décadent</h3>
+                <p>
+                  Le concept de « Vedge » s’inscrit dans la vision de
+                  l’alimentation. Il reflète notre volonté de ralentir la
+                  cadence, d’offrir des plats sains à une clientèle soucieuse de
+                  son bien-être et de l’environnement. Une clientèle hédoniste
+                  qui mange avec plaisir et de façon responsable.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <img src="assets/images/about3.jpg" alt="Image restaurant entouré de plantes" />
+              <div>
+                <h3>Cuisine artisanale</h3>
+                <p>
+                  Nous connaissons chaque ingrédient qui entre dans la
+                  composition de nos recettes. Nous créons la plupart de nos
+                  recettes à partir de rien — rien que des ingrédients naturels,
+                  frais et savoureux. Voilà qui fait la vraie beauté de notre
+                  cuisine!
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <img src="assets/images/about2.jpg" alt="Image d'un homme entrain de manger" />
+              <div>
+                <h3>Écoresponsabilité</h3>
+                <p>
+                  Écoresponsabilité Amants de la nature, nous prônons le respect
+                  de la faune et de la flore. C’est pourquoi notre salle à
+                  manger et notre cuisine respectent les standards de la pensée
+                  écoresponsable.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <img src="assets/images/about1.jpg" alt="Image d'une femme entrain de manger avec plaisir" />
+              <div>
+                <h3>Fournisseurs locaux</h3>
+                <p>
+                  Nous nous approvisionnons auprès d’artisans locaux, car nous
+                  estimons qu’une bonne cuisine dépend de la qualité de ses
+                  ingrédients. Moins nos ingrédients voyagent, plus nous pouvons
+                  offrir à nos clients des plats qui se distinguent par leur
+                  fraîcheur, leur authenticité et leur qualité. Le tout, en
+                  réduisant notre empreinte écologique et nos émissions de gaz
+                  carbonique.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="highlights">
+          <h2>Restaurants en vedette</h2>
+          <div class="grid">
+            <figure class="figure-thin-caption">
+              <a href="#">
+                <img src="assets/images/trois-rivieres.jpg" alt="Image restaurant Vedge Trois-Rivieres" />
+              </a>
+              <figcaption><a href="#">Trois-Rivières</a></figcaption>
+            </figure>
+
+            <figure class="figure-thin-caption">
+              <a href="#">
+                <img src="assets/images/drummondville.jpg" alt="Image restaurant Vedge Drummondville" />
+              </a>
+              <figcaption><a href="#">Drummondville</a></figcaption>
+            </figure>
+
+            <figure class="figure-thin-caption">
+              <a href="val-jalbert.html">
+                <img src="assets/images/valjalbert.jpg" alt="Image restaurant Vedge Val-Jalbert" />
+              </a>
+              <figcaption><a href="val-jalbert.html">Val-Jalbert</a></figcaption>
+            </figure>
+
+            <figure class="figure-thin-caption">
+              <a href="#">
+                <img src="assets/images/dix30.jpg" alt="Image restaurant Vedge Dix30" />
+              </a>
+              <figcaption><a href="#">Dix30</a></figcaption>
+            </figure>
+
+            <figure class="figure-thin-caption">
+              <a href="#">
+                <img src="assets/images/toronto.jpg" alt="Image restaurant Vedge Toronto" />
+              </a>
+              <figcaption><a href="#">Toronto</a></figcaption>
+            </figure>
+
+            <figure class="figure-thin-caption">
+              <a href="#">
+                <img src="assets/images/berlin.jpg" alt="Image restaurant Vedge Berlin" />
+              </a>
+              <figcaption><a href="#">Berlin</a></figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="franchise">
+          <h2>Vous voulez établir votre propre restaurant ?</h2>
+          <div class="grid">
+            <p>Laissez-nous vous convaincre de développer votre propre franchise « Vedge » !</p>
+            <a class="btn">Contactez-nous!</a>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="links">
+            <h2>Liens utiles</h2>
+            <ul>
+              <li>
+                <a class="link" href="philosophie.html">Notre philosophie</a>
+              </li>
+              <li><a class="link" href="#">Carrières</a></li>
+              <li><a class="link" href="#">Franchises</a></li>
+              <li><a class="link" href="#">Presse</a></li>
+              <li><a class="link" href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="newsletter">
+            <h2>Infolettre</h2>
+            <form>
+              <input type="text" id="lab-email" placeholder="votre courriel" />
+              <label class="visually-hidden" for="lab-email">courriel</label>
+              <button class="btn">S'abonner</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+
+/***************************************** Style des compositions de la plateforme *****************************************/
+
+/**************************************************/
+/* Promotions                                     */
+/**************************************************/
+
+.promotions .figure-large-caption:nth-child(1),
+.promotions .figure-large-caption:nth-child(2) {
+  display: none;
+}
+
+@media (min-width: 520px) {
+  .promotions > .grid {
+    margin-right: -1.5em;
+    margin-top: -0.5em;
+  }
+
+  .promotions > .grid > * {
+    width: calc(100% / 2 - 1.5em);
+    margin-right: 1.5em;
+    margin-top: 1.5em;
+  }
+
+  .promotions figcaption {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1121px) {
+  .promotions > .grid {
+    margin-right: -1.5em;
+    margin-top: -0.5em;
+  }
+
+  .promotions > .grid > * {
+    width: calc(100% / 3 - 1.5em);
+    margin-right: 1.5em;
+    margin-top: 1.5em;
+  }
+
+  .promotions .figure-large-caption:nth-child(1),
+  .promotions .figure-large-caption:nth-child(2) {
+    display: block;
+  }
+}
+
+/**************************************************/
+/* Retaurants vedettes                            */
+/**************************************************/
+
+@media (min-width: 520px) {
+  .highlights > .grid {
+    margin-right: -1.5em;
+    margin-top: -0.5em;
+  }
+
+  .highlights > .grid > * {
+    width: calc(100% / 2 - 1.5em);
+    margin-right: 1.5em;
+    margin-top: 1.5em;
+  }
+}
+
+@media (min-width: 1121px) {
+  .highlights > .grid {
+    margin-right: -1.5em;
+    margin-top: -0.5em;
+  }
+
+  .highlights > .grid > * {
+    width: calc(100% / 3 - 1.5em);
+    margin-right: 1.5em;
+    margin-top: 1.5em;
+  }
+}
+
+/**************************************************/
+/* Menus                                          */
+/**************************************************/
+
+.menus > .grid > * {
+  flex-grow: 1;
+  width: calc(100% / 2 - 1.5em);
+  margin-right: 1.5em;
+  margin-top: 1.5em;
+  min-width: 20rem;
+}
+
+.menus > .grid {
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.menus .figure-large-caption {
+  min-width: 20rem;
+}
+
+.menus .figure-large-caption figcaption {
+  height: 7.5rem;
+}
+
+.menus .figure-large-caption a {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/**************************************************/
+/* Resérvation                                    */
+/**************************************************/
+
+.reservations .grid > * {
+  flex-basis: calc(100% / 2 - 1.5em);
+  margin-top: 0;
+  min-width: 25rem;
+  flex-grow: 1;
+}
+
+.reservations .grid > div {
+  margin-left: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.reservations .grid > div * {
+  max-width: 30ch;
+}
+
+.reservations .grid {
+  margin-right: -1.5em;
+}
+
+.reservations-group h3 {
+  margin-top: 0.5em;
+}
+
+.reservations-group h3:last-of-type {
+  margin-top: 0.75em;
+}
+
+.reservations-group figure {
+  height: calc(20vh + 20vw);
+  position: relative;
+  background-image: url(../images/valjalbert.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+
+.reservations-group figure a {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.reservations-group .grid > a {
+  flex: 1;
+  margin-top: 0;
+  max-width: none;
+}
+
+.reservations-group .grid > a:first-of-type {
+  margin-right: 1.5em;
+}
+
+@media (max-width: 1040px) {
+  .reservations-group .grid > a:nth-of-type(2) {
+    margin-top: 0.5em;
+    min-width: 100%;
+  }
+
+  .reservations-group .grid a:nth-of-type(1) {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 890px) {
+  .reservations figure {
+    flex-basis: 100%;
+  }
+
+  .reservations .grid > div {
+    margin-left: 0;
+    margin-top: 1.5em;
+  }
+
+  .reservations .grid {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 470px) {
+  .reservations-group figure a {
+    right: auto;
+    left: auto;
+  }
+}
+
+/**************************************************/
+/* Gallerie photo                                 */
+/**************************************************/
+
+.gallery {
+  margin-top: 0;
+}
+
+.gallery > * {
+  width: calc(100% / 4 - 1.5em);
+  margin-right: 1.5em;
+  margin-top: 1.5em;
+}
+
+@media (max-width: 1160px) {
+  .gallery figure:nth-child(4),
+  .gallery figure:nth-child(5),
+  .gallery figure:nth-child(6),
+  .gallery figure:nth-child(7) {
+    display: none;
+  }
+
+  .gallery > * {
+    width: calc(100% / 2 - 1.5em);
+  }
+}
+
+@media (max-width: 550px) {
+  .gallery {
+    margin-right: -1.5em;
+  }
+
+  .gallery > * {
+    width: calc(100% - 1.5em);
+  }
+}
+
+/**************************************************/
+/* Critiques                                      */
+/**************************************************/
+
+.right {
+  margin-left: auto;
+}
+
+/**************************************************/
+/* Philosophy                                     */
+/**************************************************/
+
+.philo-articles > h2 {
+  margin-left: 0.5rem;
+}

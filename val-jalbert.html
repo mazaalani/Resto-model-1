@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lamsahle El Mamoun et Zaalani Mohammed Amine">
+    <meta name="description" content="Travail pratique #03 — Optimiser et décliner une maquette HTML+CSS">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- changement de police pour gagner en convivialité -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" type="text/css" href="assets/css/01-general.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/02-composantes.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/03-commun.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/04-composition.css" />
+    <title>Restaurant Val-Jalbert</title>
+  </head>
+  <body>
+    <!-- Barre de navigation -->
+    <header>
+      <div class="grid container">
+        <a href="index.html" class="logo">Vedge</a>
+        <nav>
+          <ul>
+            <li><a href="#">Nos promotions</a></li>
+            <li class="dropdown">
+              <a href="#">Nos restaurants <small>&nabla;</small></a>
+              <ul class="dropdown-content">
+                <li><a href="#">Drummondville</a></li>
+                <li><a href="val-jalbert.html">Val-Jalbert</a></li>
+                <li><a href="#">Dix30</a></li>
+                <li><a href="#">Trois-Rivières</a></li>
+                <li><a href="#">Toronto</a></li>
+                <li><a href="#">Berlin</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <form class="search">
+          <label for="search">Trouvez un Vedge près de chez vous :</label>
+          <input type="text" name="search" id="search" placeholder="Code postal : H2E 2Y7" />
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <!-- section image principale -->
+      <section class="hero hero-val-jalbert">
+        <div class="hero-wrapper">
+          <h1 class="heading-primary container">Vedge | Val-Jalbert</h1>
+          <p>500 rue de la Montagne</p>
+          <a class="btn btn-small" href="https://www.google.ca/maps/place/500+Rue+de+la+Montagne,+Montr%C3%A9al" target="_blank">Ouvrir sur Google Maps</a>
+        </div>
+        <!-- Image reposionnée avec background-image pour pouvoir centrer facilement le texte en dessus -->
+      </section>
+
+      <div class="container">
+        <section class="actions">
+          <h2 class="visibility-hidden">
+            Commander et réserver votre table en ligne
+          </h2>
+          <div class="grid">
+            <a class="btn">Commander</a>
+            <a class="btn">Réserver</a>
+          </div>
+        </section>
+
+        <section>
+          <h2>Heures d'ouverture</h2>
+          <div class="timetable">
+            <div class="day">
+              <div>Lundi, Mardi et Mercredi</div>
+              <div class="dots"></div>
+              <div class="time">11:30 – 22:00</div>
+            </div>
+            <div class="day">
+              <div>Jeudi et vendredi</div>
+              <div class="dots"></div>
+              <div class="time">11:30 – 23:00</div>
+            </div>
+            <div class="day">
+              <div>Samedi</div>
+              <div class="dots"></div>
+              <div class="time">10:00 – 23:00</div>
+            </div>
+            <div class="day">
+              <div>Dimanche</div>
+              <div class="dots"></div>
+              <div class="time">10:00 – 22:00</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menus">
+          <h2>Menus</h2>
+          <div class="grid">
+            <figure class="figure-large-caption">
+              <img src="assets/images/menu1.jpeg" alt="Image d'une femme entrain de consulter le menu dans un restaurant" />
+              <figcaption>
+                <p>Du lundi au vendredi, samedi et dimanche soir</p>
+                <a href="#">Menu jour et soir</a>
+              </figcaption>
+            </figure>
+
+            <figure class="figure-large-caption" >
+              <img src="assets/images/menu2.jpeg" alt="Image d'un menu déposé sur une table d'un restaurant" />
+              <figcaption>
+                <p>Samedi et dimanche de 10 h à 15 h</p>
+                <a href="#">Menu brunch</a>
+              </figcaption>
+            </figure>
+
+            <figure class="figure-large-caption">
+              <img src="assets/images/menu3.jpeg" alt="Image des boissons déposés sur une table d'un restaurant" />
+              <figcaption>
+                <p>
+                  Vins natures et biologiques, bières et cocktails botaniques
+                </p>
+                <a href="#">Menu boissons</a>
+              </figcaption>
+            </figure>
+
+            <figure class="figure-large-caption">
+              <img src="assets/images/menu4.jpeg" alt="Image d'une homme qui dépose son repas emporter sur une table" />
+              <figcaption>
+                <p>
+                  Une grande sélection de plats pour manger au bureau ou à la
+                  maison
+                </p>
+                <a href="#">Menu pour emporter</a>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="reservations">
+          <h2>Réservez votre table</h2>
+
+          <div class="grid">
+            <figure>
+              <img src="assets/images/about1.jpg" alt="Image d'une femme entrain de manger" />
+            </figure>
+
+            <div>
+              <div>
+                <p>
+                  Toutes les réservations doivent être faites via notre site
+                  web.
+                </p>
+                <a class="btn" href="#">Réservez maintenant</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="reservations-group">
+          <h2>Réserver pour un groupe</h2>
+          <h3>Neuf personnes et plus?</h3>
+          <p>
+            « Vedge » Val-Jalbert peut accueillir des groupes jusqu’à 24
+            personnes.
+          </p>
+          <figure>
+            <a class="btn" href="#">Consultez notre page pour les groupes</a>
+          </figure>
+          <h3>Menu</h3>
+          <p>
+            Les groupes de 20 à 24 personnes ont accès à une carte de groupe qui
+            réunit l’ensemble de nos meilleurs vendeurs. Chaque personne à votre
+            table sélectionnera au minimum une entrée et un plat.
+          </p>
+          <div class="grid">
+            <a class="btn">Voir le menu de groupe</a>
+            <a class="btn"> Faites une demande de réservation de groupe </a>
+          </div>
+        </section>
+
+        <section>
+          <h2>Gallerie photo</h2>
+          <div class="gallery">
+            <figure>
+              <img src="assets/images/about4.jpg" alt="Image des légumes frais" />
+            </figure>
+            <figure>
+              <img src="assets/images/about3.jpg" alt="Image restaurant entouré de plantes" />
+            </figure>
+            <figure>
+              <img src="assets/images/about2.jpg" alt="Image d'un homme entrain de manger" />
+            </figure>
+            <figure>
+              <img src="assets/images/about1.jpg" alt="Image d'une femme entrain de manger avec plaisir" />
+            </figure>
+            <figure>
+              <img src="assets/images/berlin.jpg" alt="Image restaurant Vedge Berlin" />
+            </figure>
+            <figure>
+              <img src="assets/images/dix30.jpg" alt="Image restaurant Vedge Dix30" />
+            </figure>
+            <figure>
+              <img src="assets/images/valjalbert.jpg" alt="Image restaurant Vedge Val-Jalbert" />
+            </figure>
+            <div class="grid-solo grid">
+              <a class="link" href="#">Voir toutes les images</a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Les critiques sont dithyrambiques</h2>
+          <div class="testimonial">
+            <img src="assets/images/reviewer.jpeg" alt="Photo Sarah O’Maillet" />
+            <div class="content">
+              <span>Sarah O’Maillet</span>
+              <p>
+                Absolument délicieux. Je ne suis pas végétalienne et c’était de
+                loin l’un des meilleurs repas que j’ai pris à Val-Jalbert.
+                Prenez le « hamburger » de la maison avec des frites de patates
+                douces ou le « fromage grillé ». Nous étions là pour un déjeuner
+                tardif un lundi et le service était amical et rapide.
+                L’intérieur est également magnifique. J’adorais tout à ce sujet
+                !
+              </p>
+            </div>
+          </div>
+          <a class="btn right" href="#">Voir toutes les critiques</a>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="franchise">
+          <h2>Vous voulez établir votre propre restaurant ?</h2>
+          <div class="grid">
+            <p>
+              Laissez-nous vous convaincre de développer votre propre franchise « Vedge » !
+            </p>
+            <a class="btn">Contactez-nous!</a>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="links">
+            <h2>Liens utiles</h2>
+            <ul>
+              <li>
+                <a class="link" href="philosophie.html">Notre philosophie</a>
+              </li>
+              <li><a class="link" href="#">Carrières</a></li>
+              <li><a class="link" href="#">Franchises</a></li>
+              <li><a class="link" href="#">Presse</a></li>
+              <li><a class="link" href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="newsletter">
+            <h2>Infolettre</h2>
+            <form>
+              <input type="text" id="lab-email" placeholder="votre courriel" />
+              <label class="visually-hidden" for="lab-email">courriel</label>
+              <button class="btn">S'abonner</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

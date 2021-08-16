@@ -1,0 +1,224 @@
+
+/***************************************** Style des composantes de la plateforme *****************************************/
+
+/**************************************************/
+/* Forme ayant large légende                      */
+/**************************************************/
+
+.figure-large-caption {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.figure-large-caption figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 11;
+  padding: 1.2em;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--white);
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1.1rem;
+  border: 5px solid transparent;
+  height: 7rem;
+}
+
+.figure-large-caption:hover figcaption {
+  border-color: var(--white);
+}
+
+/**************************************************/
+/* Forme ayant mince légende                      */
+/**************************************************/
+
+.figure-thin-caption {
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+
+.figure-thin-caption figcaption {
+  font-size: inherit;
+}
+
+.figure-thin-caption:hover,
+.figure-thin-caption:focus-within {
+  overflow: hidden;
+  background-color: var(--black-darker);
+  color: var(--white);
+  border-color: var(--black-darker);
+}
+
+/**************************************************/
+/* Table des horaires                             */
+/**************************************************/
+
+/* Définie comme composante pour être réutilisée dans les pages des autres franchises du restaurants Vedge */
+/* Adaptable sans media query */
+
+.timetable {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.timetable > .day {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+.timetable > .day > .dots {
+  flex: 1;
+  border-bottom: 1px dashed var(--light-grey);
+  margin: 0 1.5em;
+}
+
+.timetable > .day > .time {
+  margin-top: 0;
+}
+
+/**************************************************/
+/* Témoignage                                     */
+/**************************************************/
+
+/* Définie comme composante pour être réutilisée dans les pages des autres franchises du restaurants Vedge
+   et même sur une seule page si on a décidé d'afficher plusieurs témoignages à la fois */
+/* Adaptable sans media query */
+
+.testimonial {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial img {
+  border-radius: 50%;
+  max-width: 5em;
+  float: left;
+  margin-right: 1rem;
+}
+.testimonial .content {
+  margin: auto;
+}
+
+.testimonial .content span {
+  font-weight: bold;
+}
+
+.testimonial .content p {
+  margin: auto;
+}
+
+/**************************************************/
+/* Gallery des images                             */
+/**************************************************/
+
+/* Définie comme composante pour être réutilisée dans les page des autres franchises du restaurants Vedge */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.gallery > * {
+  cursor: pointer;
+}
+
+.gallery figure {
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.gallery figure img {
+  transition: all 1s;
+}
+
+.gallery figure img:hover {
+  transform: scale(1.1);
+}
+
+/**************************************************/
+/* Articles enchaînés                             */
+/**************************************************/
+
+.chained-articles {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.chained-articles * {
+  margin-top: 0;
+}
+
+.chained-articles p {
+  margin-top: 1rem;
+}
+
+.chained-articles > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.chained-articles > div:not(:first-of-type) {
+  margin-top: 3rem;
+}
+
+.chained-articles > div:nth-of-type(odd) div {
+  margin-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.chained-articles > div:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.chained-articles > div:nth-of-type(even) div {
+  padding-right: 3rem;
+}
+
+.chained-articles > div:nth-of-type(even) img {
+  margin-left: -1.5rem;
+}
+
+.chained-articles > div > * {
+  width: calc(100% / 2 - 1.5em);
+  margin-left: 0;
+}
+
+/* Cette composante est définie avec son adaptation car elle est autonome */
+
+@media (max-width: 930px) {
+  .chained-articles {
+    display: block;
+    margin-top: 0;
+  }
+
+  .chained-articles > div {
+    display: block;
+  }
+
+  .chained-articles > div > * {
+    width: 100%;
+    margin: 1.5rem auto;
+  }
+
+  .chained-articles > div:nth-of-type(odd) div {
+    margin-left: auto;
+  }
+
+  .chained-articles > div:nth-of-type(even) img {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,279 @@
+
+/*************************** Style des élements présents dans toutes les pages de la plateforme ***************************/
+
+/**************************************************/
+/* Grille                                         */
+/**************************************************/
+
+.grid {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-solo {
+  justify-content: center;
+  flex: 1;
+}
+
+.columns {
+  columns: 1;
+}
+
+/**************************************************/
+/* Actions (Conteneur resérver et commander)      */
+/**************************************************/
+
+/* optimisation adaptabilité et design */
+.actions .grid > a {
+  flex: 1;
+  margin-top: 0;
+  max-width: none;
+}
+
+.actions .grid > a:first-of-type {
+  margin-right: 1.5em;
+}
+
+@media (max-width: 890px) {
+  .actions .grid > a:nth-of-type(2) {
+    margin-top: 0.5em;
+    min-width: 100%;
+  }
+
+  .actions .grid > a:nth-of-type(1) {
+    margin-right: auto;
+  }
+}
+
+/**************************************************/
+/* Entête de page                                 */
+/**************************************************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white);
+  padding: 1em 0;
+  height: 100px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--maxWidthContent);
+  width: calc(100% - 1.5rem);
+}
+
+.logo {
+  display: block;
+  font-size: 2rem;
+  margin-right: auto;
+}
+
+@media (max-width: 460px) {
+  header > .grid {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .logo {
+    margin-right: 0;
+    text-align: center;
+    padding-right: 3rem;
+  }
+}
+
+/**************************************************/
+/* Navigation                                     */
+/**************************************************/
+
+nav > ul {
+  display: flex;
+}
+
+nav > ul > li {
+  margin-right: 1.5em;
+  margin-top: 0;
+}
+
+/* modification complete du menu deroulant pour avoir un affichage fluide sans décalages
+et rajouter lien sur 'Nos restaurant' pour ameliorer l'accessibilité et l'extension du site */
+nav a {
+  height: 100%;
+  padding: 0.5em 1em;
+  min-width: max-content;
+}
+
+nav li:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.search {
+  display: none;
+  padding: 0.4em 1em;
+  align-items: center;
+  min-width: max-content;
+}
+
+.search > input {
+  font-size: 0.8rem;
+  padding: 0.4em;
+  margin-left: 0.8em;
+  margin-top: 0;
+}
+
+@media (min-width: 1121px) {
+  .search {
+    display: flex;
+  }
+}
+
+/**************************************************/
+/* Menu déroulant                                 */
+/**************************************************/
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content li {
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+.dropdown-content {
+  width: 100%;
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  background-color: var(--white);
+  color: var(--light-grey);
+}
+
+.dropdown-content li:not(:last-of-type) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content li:not(:last-of-type) a {
+  padding-bottom: calc(0.5em - 2px);
+}
+
+.dropdown-content li:last-of-type:hover a {
+  padding-bottom: 0.5em;
+}
+
+/* Rajout de navigation en focus */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/**************************************************/
+/* Bannnière hero                                 */
+/**************************************************/
+
+/* Optimisation hauteur image principale pour ne pas dépasser la hauteur de l'écran */
+.hero {
+  margin: 0;
+  min-height: calc(100vh - 100px); /* 100px correspond à la hauteur du header */
+  position: relative;
+  background-size: cover;
+}
+
+/* Image reposionnée avec backgroun-image pour pouvoir centrer facilement le texte en dessus */
+.hero-home {
+  background-image: url(../images/hero.jpg);
+}
+
+.hero-philo {
+  background-image: url(../images/philosophie.jpg);
+}
+
+.hero-val-jalbert {
+  background-image: url(../images/valjalbert.jpg);
+}
+
+/* Modification texte image principale centré conformément au prototype */
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.hero-wrapper * {
+  color: var(--white);
+}
+
+.hero-wrapper p {
+  font-size: 1.5rem;
+}
+
+/**************************************************/
+/* Pied de page                                   */
+/**************************************************/
+
+footer {
+  background-color: var(--white);
+  padding: 1.5rem 0;
+}
+
+/* Correction alignement des elements du footer */
+footer .container > .grid {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  align-items: flex-start;
+}
+
+footer > .container > .grid > * {
+  width: calc(100% / 2 - 1.5em);
+  margin-right: 1.5em;
+}
+
+.newsletter > form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 850px) {
+  footer > .container {
+    display: flex;
+  }
+
+  footer > .container > :nth-child(2) {
+    margin-right: 3rem;
+    border-right: 1px solid var(--light-grey);
+  }
+
+  .franchise {
+    order: 2;
+    flex: 1;
+  }
+
+  footer > .container > .grid {
+    flex: 1;
+    order: 1;
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .links {
+    flex: 1;
+  }
+
+  .newsletter {
+    flex: 1;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,259 @@
+
+/***************************************** Style général de la plateforme *****************************************/
+
+/**************************************************/
+/* Le reset CSS                                   */
+/**************************************************/
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**************************************************/
+/* Propriétés personnalisées      */
+/**************************************************/
+
+:root {
+  /* Palette de couleurs */
+  --light-grey: #e6ded9;
+  --white: rgb(248, 246, 246);
+  --black: #36454f;
+  --black-darker: #222c33;
+  --text-color: rgb(80, 79, 79);
+  /* Typographie */
+  --font-display: "Halant", serif;
+  --font-body: "Nunito Sans", sans-serif;
+  --font-size: 1.5rem;
+  --line-height: 1.5rem;
+  /* ajustement largeur contenu (était de 1280px) en se rapprochant vers celui du prototype
+     et réduire l'encombrement dans certaines parties des pages (ex: footer) */
+  --maxWidthContent: 90vw;
+}
+
+/**************************************************/
+/* Régles générales                               */
+/**************************************************/
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+form {
+  display: flex;
+}
+
+/**************************************************/
+/* Typographie                                    */
+/**************************************************/
+
+html {
+  font-family: var(--font-body);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text-color);
+}
+
+/* Echelle: Perfect Fourth */
+
+h1 {
+  font-size: 3.157rem;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 2.369rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.777rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/* Adaptation de la taille de police */
+
+@media (min-width: 300px) {
+  :root {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 350px) {
+  :root {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 520px) {
+  :root {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1121px) {
+  :root {
+    font-size: 1.1rem;
+  }
+}
+
+/**************************************************/
+/* Rythme                                         */
+/**************************************************/
+
+* + div,
+* + figure,
+* + a,
+* + blockquote,
+* + p,
+* + small,
+* + button,
+* + h1,
+h2 + *,
+* + h3,
+h3 + img,
+img + img,
+article + article,
+select {
+  margin-top: 1.5em;
+}
+
+* + input,
+li + li {
+  margin-top: 0.5em;
+}
+
+/* Espacement des sections principales */
+
+.container > section {
+  margin: 3em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1121px) {
+  .container > section {
+    margin: 4em 0;
+  }
+}
+
+/**************************************************/
+/* Esthetique des boutons                         */
+/**************************************************/
+
+/* Modification des couleurs et des styles des effets intercatives */
+
+button {
+  border: none;
+}
+
+.btn {
+  background-color: var(--black);
+  border-radius: 5px;
+  color: var(--white);
+  font-family: inherit;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 1em 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: max-content;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.btn-small {
+  max-width: fit-content;
+  margin-top: 2.5rem;
+}
+
+.btn:hover {
+  background-color: var(--light-grey);
+  color: var(--black-darker);
+  cursor: pointer;
+}
+
+.link {
+  display: inline-block;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: underline;
+  width: max-content;
+  cursor: pointer;
+  border-radius: 3px;
+  padding : 0 0.2em;
+}
+
+.link:hover {
+  background-color: var(--black);
+  color: var(--white);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/**************************************************/
+/* Esthetique des champs                          */
+/**************************************************/
+
+input {
+  flex: 1;
+  font-size: 1.3rem;
+  font-family: var(--font-body);
+  padding: 0.3em;
+  border-radius: 5px;
+  border: 1px solid var(--light-grey);
+  outline: none;
+  width: 100%;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+input::placeholder {
+  color: lightgrey;
+  opacity: 1; /* Firefox */
+}
+
+/* Internet Explorer 10-11 */
+input:-ms-input-placeholder {
+  color: lightgrey;
+}
+
+/* Microsoft Edge */
+input::-ms-input-placeholder {
+  color: lightgrey;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 1px 2px rgba(11,50,93,0.25);
+}
+
+/* Classe appliquée sur les labels cachés pour respecter les régles de l'accessibilité */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
